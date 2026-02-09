@@ -1,0 +1,44 @@
+{
+  "name": "soltag-highlighter",
+  "displayName": "soltag-highlighter",
+  "version": "0.0.2",
+  "description": "Syntax highlighting for inline Solidity (sol`...`) in TypeScript",
+  "icon": "icon.png",
+  "galleryBanner": {
+    "color": "#000000"
+  },
+  "license": "MIT",
+  "pricing": "Free",
+  "publisher": "haydenshively",
+  "author": "Hayden Shively",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/haydenshively/soltag-highlighter.git"
+  },
+  "engines": {
+    "vscode": "^1.75.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "extensionDependencies": [
+    "nomicfoundation.hardhat-solidity"
+  ],
+  "contributes": {
+    "grammars": [
+      {
+        "scopeName": "inline.solidity.tagged-template",
+        "path": "./syntaxes/sol-injection.tmLanguage.json",
+        "injectTo": [
+          "source.js",
+          "source.ts",
+          "source.js.jsx",
+          "source.tsx"
+        ],
+        "embeddedLanguages": {
+          "meta.embedded.block.solidity": "solidity"
+        }
+      }
+    ]
+  }
+}
